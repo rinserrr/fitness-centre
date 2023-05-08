@@ -63,8 +63,6 @@
       </div>
     </div>
 
-
-
     <main>
       <section class="gym">
         <div class="container">
@@ -82,24 +80,30 @@
 
             <div class="gym__image">
               <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/gym/img-mobile.webp 1x, img/gym/img-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym/img-tablet.webp 1x, img/gym/img-tablet@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gym/img-mobile.webp 1x, img/gym/img-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/gym/img-tablet.webp 1x, img/gym/img-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/gym/img-desktop.webp 1x, img/gym/img-desktop@2x.webp 2x">
 
                 <source media="(max-width: 767px)" srcset="img/gym/img-mobile.jpg 1x, img/gym/img-mobile@2x.jpg 2x">
                 <source media="(max-width: 1199px)" srcset="img/gym/img-tablet.jpg 1x, img/gym/img-tablet@2x.jpg 2x">
-                <img width="660" height="401" src="img/gym/img-desktop.jpg" srcset="img/gym/img-desktop@2x.jpg 2x" alt="Тренажерный зал." >
+                <img width="660" height="401" src="img/gym/img-desktop.jpg" srcset="img/gym/img-desktop@2x.jpg 2x"
+                  alt="Тренажерный зал.">
               </picture>
             </div>
 
             <div class="gym__video" data-video-block>
               <div class="gym__video-cover" data-video-cover>
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/gym/video-mobile.webp 1x, img/gym/video-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/gym/video-mobile.webp 1x, img/gym/video-mobile@2x.webp 2x">
                   <source type="image/webp" srcset="img/gym/video-desktop.webp 1x, img/gym/video-desktop@2x.webp 2x">
 
-                  <source media="(max-width: 767px)" srcset="img/gym/video-mobile.jpg 1x, img/gym/video-mobile@2x.jpg 2x">
-                  <img width="364" height="228" src="img/gym/video-desktop.jpg" srcset="img/gym/video-desktop@2x.jpg 2x" alt="Тренажерный зал." >
+                  <source media="(max-width: 767px)"
+                    srcset="img/gym/video-mobile.jpg 1x, img/gym/video-mobile@2x.jpg 2x">
+                  <img width="364" height="228" src="img/gym/video-desktop.jpg" srcset="img/gym/video-desktop@2x.jpg 2x"
+                    alt="Тренажерный зал.">
                 </picture>
 
                 <button class="gym__video-button" data-video-button>
@@ -110,9 +114,158 @@
                 </button>
               </div>
 
-              <div class="gym__video-yt" id="player" data-video-container data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
+              <div class="gym__video-yt" id="player" data-video-container
+                data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="subscription" id="section-subscription">
+        <div class="container">
+          <h2 class="title">Абонементы</h2>
+          <div class="subscription__tabs tabs" data-tabs="parent">
+            <div class="tabs__controls">
+              <button class="tabs__control is-active" type="button" data-tabs="control" data-content="1">1 месяц</button>
+              <button class="tabs__control" type="button" data-tabs="control" data-content="6">6 месяцев</button>
+              <button class="tabs__control" type="button" data-tabs="control" data-content="12">12 месяцев</button>
+            </div>
+
+            <ul class="tabs__content">
+              <li class="tabs__element is-active" data-tabs="element" data-element-content="1">
+                <ul class="subscription__card-list">
+                  <li class="subscription__card" tabindex="0">
+                    <h3>С тренером</h3>
+                    <small>12 занятий</small>
+                    <p class="subscription__price" data-price="5000">
+                      <span>5000</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__card" tabindex="0">
+                    <h3>Дневной</h3>
+                    <small>с 8:00 до 17:00</small>
+                    <p class="subscription__price" data-price="1700">
+                      <span>1700</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__card" tabindex="0">
+                    <h3>Полный день</h3>
+                    <small>с 8:00 до 22:00</small>
+                    <p class="subscription__price" data-price="2700">
+                      <span>2700</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="tabs__element" data-tabs="element" data-element-content="6">
+                <ul class="subscription__card-list">
+                  <li class="subscription__card" tabindex="0">
+                    <h3>С тренером</h3>
+                    <small>72 занятия</small>
+                    <p class="subscription__price" data-price="24000">
+                      <span>24000</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__card" tabindex="0">
+                    <h3>Дневной</h3>
+                    <small>с 8:00 до 17:00</small>
+                    <p class="subscription__price" data-price="8200">
+                      <span>8200</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__card" tabindex="0">
+                    <h3>Полный день</h3>
+                    <small>с 8:00 до 22:00</small>
+                    <p class="subscription__price" data-price="13000">
+                      <span>13000</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="tabs__element" data-tabs="element" data-element-content="12">
+                <ul class="subscription__card-list">
+                  <li class="subscription__card" tabindex="0">
+                    <h3>С тренером</h3>
+                    <small>144 занятия</small>
+                    <p class="subscription__price" data-price="40000">
+                      <span>40000</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__card" tabindex="0">
+                    <h3>Дневной</h3>
+                    <small>с 8:00 до 17:00</small>
+                    <p class="subscription__price" data-price="13700">
+                      <span>13700</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__card" tabindex="0">
+                    <h3>Полный день</h3>
+                    <small>с 8:00 до 22:00</small>
+                    <p class="subscription__price" data-price="22000">
+                      <span>22000</span>
+                      <svg width="30" height="42">
+                        <use href="img/sprite.svg#icon-ruble"></use>
+                      </svg>
+                    </p>
+
+                    <a class="button button--secondary subscription__button" href="#">купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subscription__weights-wrapper">
+          <picture>
+            <source type="image/webp" media="(max-width: 1199px)" srcset="./img/subscription/weights-tablet.webp 1x, ./img/subscription/weights-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/subscription/weights-desktop.webp 1x, ./img/subscription/weights-desktop@2x.webp 2x">
+
+            <source media="(max-width: 1199px)" srcset="../img/subscription/weights-tablet.png 1x, ./img/subscription/weights-tablet@2x.png 2x">
+            <img class="subscription__weights" width="251" height="367" src="./img/subscription/weights-desktop.png" srcset="./img/subscription/weights-desktop@2x.png" alt="">
+          </picture>
         </div>
       </section>
 

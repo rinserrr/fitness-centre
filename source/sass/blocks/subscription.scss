@@ -1,0 +1,240 @@
+.subscription {
+  padding-top: 117px;
+  padding-bottom: 120px;
+  width: 100%;
+  position: relative;
+  background-color: var(--color-ghost-white);
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 67px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  h2 {
+    margin-bottom: 7px;
+    text-align: center;
+    transform: translateX(-2px);
+
+    @include vp-1199 {
+      margin-bottom: 10px;
+      transform: translateX(-7px);
+    }
+
+    @include vp-767 {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.subscription__card-list {
+  margin: 0;
+  padding: 0 7px;
+  padding-bottom: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 54px;
+  row-gap: 40px;
+  list-style-type: none;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    row-gap: 55px;
+  }
+
+  @include vp-767 {
+    row-gap: 49px;
+  }
+}
+
+.subscription__card {
+  padding: 50px 20px 62px 20px;
+  max-width: 347px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-default-white);
+
+  &::after {
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    position: absolute;
+    content: "";
+    top: -7px;
+    left: -7px;
+    background-color: var(--color-default-white);
+    z-index: -1;
+  }
+
+  @include vp-1199 {
+    padding-top: 50px;
+    padding-bottom: 60px;
+    width: 64.5%;
+    max-width: none;
+    place-self: center;
+  }
+
+  @include vp-767 {
+    padding-top: 44px;
+    padding-bottom: 49px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 40px;
+
+    @include vp-1199 {
+      margin-bottom: 5px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 9px;
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  small {
+    margin: 0;
+    margin-bottom: 65px;
+    padding: 0;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-chambray);
+
+    @include vp-1199 {
+      margin-bottom: 65px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 54px;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    &::after {
+      background: linear-gradient(135deg, var(--color-chambray) 0, var(--color-chambray) 100%);
+    }
+  }
+}
+
+.subscription__price {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $ff-roboto;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: var(--color-egyptian-blue);
+  position: relative;
+
+  @include vp-1199 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    line-height: 72px;
+
+    transform: translateX(1px);
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-price);
+    bottom: -5px;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 150px;
+    color: var(--color-whisper);
+    opacity: 0.48;
+
+    @include vp-1199 {
+      bottom: -5px;
+    }
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+
+  span {
+    margin-right: 14px;
+    position: relative;
+    z-index: 2;
+
+    @include vp-767 {
+      margin-right: 10px;
+    }
+  }
+
+  svg {
+    width: 30px;
+    height: 42px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+
+    @include vp-767 {
+      width: 24px;
+      height: 33px;
+    }
+  }
+}
+
+.subscription__button {
+  width: 206px;
+  padding: 25px;
+}
+
+.subscription__weights-wrapper {
+  width: 251px;
+  height: 367px;
+  position: absolute;
+  right: 0;
+  bottom: -72px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    width: 311px;
+    height: 321px;
+    bottom: -59px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.subscription__weights {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
