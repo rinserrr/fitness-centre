@@ -14,8 +14,10 @@ $color-neon-blue: #2c39f2;
 $color-torch-red: #ff1553;
 
 :root {
+  // default
   --color-default-black: #000000;
   --color-default-white: #ffffff;
+  --color-transparent: rgba(255, 255, 255, 0);
 
   // main colors
   --color-dark-cerulean-video: #14367a; // veil on video cover
@@ -40,6 +42,8 @@ $color-torch-red: #ff1553;
 
   // background for images
   --color-midnight-express: #000145; // Hero screen photo and super games photo
+  --color-hawkes-blue: #d4d7e3; // gym photo 2nd screen
+  --color-hawkes-blue-light: #dddfe2; // video cover
 
   // video button border and hover card button gradient
   --color-torch-red: #ed0233; //also super-games and promo bg
