@@ -1,0 +1,210 @@
+.super-games {
+  padding-top: 116px;
+  padding-bottom: 30px;
+
+  @include vp-1199 {
+    padding-top: 98px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+  }
+}
+
+.super-games__container {
+  display: grid;
+  grid-template-columns: 1fr 1.32fr;
+
+  @include vp-767 {
+    max-width: 500px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.super-games__image {
+  width: 100%;
+  place-self: stretch;
+  background-color: var(--color-midnight-express);
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--color-midnight-express);
+  }
+}
+
+.super-games__description-wrapper {
+  padding: 20px 0;
+  box-sizing: border-box;
+  place-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-torch-red);
+
+  @include vp-767 {
+    min-height: 292px;
+  }
+}
+
+.super-games__description {
+  width: 69.5%;
+  display: grid;
+  grid-template-columns: 2.18fr 1fr;
+  grid-template-rows: min-content;
+  column-gap: 40px;
+  row-gap: 10px;
+  color: var(--color-default-white);
+
+  @include vp-1199 {
+    row-gap: 0;
+    column-gap: 22px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    place-self: start start;
+
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 82px;
+    line-height: 79px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    transform: translateX(-3px);
+
+    @include vp-1199 {
+      max-width: 120px;
+      margin-left: 10px;
+      font-size: 48px;
+      line-height: 46px;
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    padding-left: 2px;
+    grid-column: span 2;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 12px;
+    }
+  }
+
+  dl {
+    margin: 0;
+    padding: 0;
+    place-self: start center;
+
+    transform: translateY(-5px);
+  }
+
+  dt {
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 150%;
+    position: relative;
+
+    @include vp-1199 {
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+  }
+
+  dd {
+    margin: 0;
+    padding: 0;
+    width: min-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background-color: var(--color-default-white);
+    }
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  small {
+    margin-left: 7px;
+    font-size: 14px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      margin-left: 4px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
+.super-games__date {
+  margin-bottom: 15px;
+
+  @include vp-1199 {
+    margin-bottom: 5px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.super-games__button {
+  margin-top: 36px;
+  padding: 28px;
+  width: 100%;
+  max-width: 346px;
+  grid-column: span 2;
+  place-self: start center;
+
+  @include vp-1199 {
+    margin-top: 27px;
+    padding: 15px;
+    font-size: 10px;
+    line-height: 12px;
+
+    transform: translateY(2px);
+
+    &::after {
+      border-width: 2px;
+    }
+  }
+
+  @include hover-focus {
+    outline: 4px solid var(--color-default-white);
+    outline-offset: -4px;
+  }
+
+  @include focus {
+    outline: 4px solid var(--color-default-white), 1px solid var(--color-cobalt);
+    outline-offset: -4px, 4px;
+  }
+}

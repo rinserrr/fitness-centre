@@ -1,0 +1,34 @@
+.contacts-block {
+  min-height: 337px;
+  background: linear-gradient(90deg, var(--color-sapphire) 0, var(--color-sapphire) 50%, var(--color-default-white) 50%, var(--color-default-white) 100%);
+  overflow-x: hidden;
+  position: relative;
+
+  &::after {
+    width: 49.9%;
+    height: 1px;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    background-color: var(--color-light-slate-grey);
+  }
+
+  @include vp-1199 {
+    background: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include vp-1199 {
+      padding: 0;
+      grid-template-columns: 1fr;
+    }
+  }
+}

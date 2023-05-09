@@ -1,0 +1,132 @@
+.contacts {
+  width: 100%;
+  max-width: 476px;
+  padding: 56px 0 30px 16px;
+  place-self: center end;
+
+  @include vp-1199 {
+    padding: 62px 45px 58px 45px;
+    width: 100%;
+    max-width: none;
+    place-self: start center;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 57px 15px;
+  }
+
+  h2 {
+    margin-bottom: 38px;
+
+    @include vp-1199 {
+      margin: 0 auto;
+      margin-bottom: 32px;
+      width: 74%;
+    }
+
+    @include vp-767 {
+      margin-bottom: 34px;
+      width: 100%;
+    }
+  }
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  // grid-auto-flow: dense;
+  column-gap: 21.9%;
+  row-gap: 11px;
+  list-style-type: none;
+  position: relative;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    width: 74%;
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 18%;
+    row-gap: 15px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  &::after {
+    width: 1px;
+    height: 84%;
+    position: absolute;
+    content: "";
+    top: 6px;
+    left: 50.8%;
+    background-color: var(--color-light-slate-grey);
+
+    @include vp-1199 {
+      height: 87%;
+      top: 8px;
+      left: 53%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contacts__item {
+  margin: 0;
+  padding: 0;
+  padding-left: 4px;
+
+  @include vp-1199 {
+    padding-left: 0;
+  }
+
+  &:nth-child(3n-1) {
+    grid-column: 1/2;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include vp-1199 {
+      font-size: 20px;
+    }
+  }
+
+  address,
+  p,
+  a {
+    margin: 0;
+    padding: 5px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      line-height: 152.34%;
+    }
+  }
+
+  a {
+    width: max-content;
+    display: block;
+
+    @include hover-focus {
+      color: var(--color-crimson);
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.gym__image {
+  width: 100%;
+  max-width: 660px;
+  aspect-ratio: 660 / 401;
+  grid-column: 2/3;
+  place-self: start start;
+  background-color: var(--color-hawkes-blue);
+
+  @include vp-1199 {
+    max-width: none;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    aspect-ratio: 678 / 345;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 320 / 313;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--color-hawkes-blue);
+  }
+}

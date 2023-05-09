@@ -1,0 +1,116 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+// Swiper 7.4.1
+@import "vendor/swiper";
+
+
+// Global
+// ---------------------------------
+
+@import "global/variables";
+@import "global/mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+
+// Components
+// ---------------------------------
+
+@import "components/button";
+
+
+// Blocks
+// ---------------------------------
+
+// @import "blocks/btn";
+// @import "blocks/modal";
+// @import "blocks/custom-input";
+// @import "blocks/custom-toggle";
+// @import "blocks/custom-select";
+// header
+@import "blocks/header";
+@import "blocks/hero";
+// gym
+@import "blocks/gym";
+@import "blocks/gym-image";
+@import "blocks/gym-video";
+// subscription
+@import "blocks/subscription";
+@import "blocks/subscription-tabs";
+// super-games
+@import "blocks/super-games";
+// staf
+@import "blocks/staff";
+@import "blocks/staff-card";
+//
+@import "blocks/advantages";
+//
+@import "blocks/promo";
+//
+@import "blocks/reviews";
+@import "blocks/review";
+//
+@import "blocks/contacts-block";
+@import "blocks/contacts-contacts";
+@import "blocks/contacts-form";
+//
+@import "blocks/footer";
+@import "blocks/footer-nav";
+@import "blocks/footer-social";
+
+// ---------------------------------
+
+// ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg
+
+// ❗ обязательно используйте mixin hover-focus для отключения ховеров на тач устройствах
+/* @mixin hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        @content;
+      }
+    }
+
+    &.focus-visible:focus {
+      @content;
+    }
+  }
+*/
+/*  @include hover-focus {
+      opacity: 0.8;
+    }
+*/
+// но не используем для текстовых полей ( input, textarea )
+// так же в сборке есть отдельный миксин для hover
+/*@mixin hover {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        @content;
+      }
+    }
+  }
+*/
+// для focus
+/*@mixin focus {
+    &.focus-visible:focus {
+      @content;
+    }
+  }
+*/
+// и для active
+/*@mixin active {
+    &.focus-visible:active {
+      @content;
+    }
+  }
+*/
+// адаптив пишем внутри каждого класса (смотрим container.scss)
+
+// для фикса проблем с vh на iOS в сборке подключен скрипт
+// используя vh на проекте задавайте их также как в примере в utils.scss
+
+// для любых transition обязательно указывайте transition-property
+// transition: $trans-default ❌ ---> transition: color $trans-default ✅
