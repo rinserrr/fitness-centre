@@ -6,6 +6,8 @@ import {initVideos} from './modules/video';
 
 import {initTabs} from './modules/tabs';
 
+import {initSliders} from './modules/sliders';
+
 
 // ---------------------------------
 
@@ -29,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initVideos();
     initTabs();
+    initSliders();
   });
 });
 

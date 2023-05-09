@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 
 // Global
@@ -43,6 +43,9 @@
 @import "blocks/subscription-tabs";
 // super-games
 @import "blocks/super-games";
+// staf
+@import "blocks/staff";
+@import "blocks/staff-card";
 
 // ---------------------------------
 

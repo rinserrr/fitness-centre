@@ -1,0 +1,153 @@
+.staff {
+  padding: 0;
+  padding-top: 75px;
+  padding-bottom: 105px;
+
+  @include vp-1199 {
+    padding-top: 70px;
+    padding-bottom: 62px;
+  }
+
+  @include vp-767 {
+    padding-top: 34px;
+    padding-bottom: 38px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  h2 {
+    margin: 0 auto;
+    margin-bottom: 13px;
+    padding: 0 103px 0 105px;
+    width: 100%;
+    max-width: $vp-1366;
+
+    @include vp-1199 {
+      margin-bottom: 0;
+      padding: 0 45px;
+      text-align: center;
+      transform: translateX(-3px);
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+      padding: 0 15px;
+    }
+  }
+}
+
+.staff__slider {
+  padding-top: 35px;
+  width: 100%;
+  height: 364px;
+  position: relative;
+  z-index: 2;
+
+  @include vp-1199 {
+    padding-top: 32px;
+    width: calc(100% - 112px);
+  }
+
+  @include vp-767 {
+    height: 338px;
+    width: calc(100% - 44px);
+  }
+}
+
+.staff__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.staff__item {
+  width: 260px;
+  height: 294px;
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+    height: 274px;
+  }
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0 35px rgba(var(--color-gulf-blue), 0.17);
+  }
+}
+
+.staff__slider-buttons {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+
+  transform: translateY(-50%);
+}
+
+.staff__slider-button {
+  padding: 0;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: transparent;
+  color: var(--color-dark-grey);
+  border: none;
+  z-index: 100;
+
+  @include vp-767 {
+    svg {
+      width: 12px;
+      height: 21px;
+    }
+  }
+
+  &--prev {
+    left: 46px;
+    transform: rotate(0deg) translateY(-2px);
+
+    @include vp-1199 {
+      left: 43px;
+      transform: rotate(180deg) translateY(2px);
+    }
+
+    @include vp-767 {
+      left: 10px;
+      transform: rotate(180deg) translateY(-2px);
+    }
+  }
+
+  &--next {
+    right: 46px;
+    transform: translateY(4px);
+
+    @include vp-1199 {
+      right: 43px;
+      transform: translateY(0);
+    }
+
+    @include vp-767 {
+      right: 10px;
+      transform: translateY(0);
+    }
+  }
+
+  @include hover-focus {
+    filter: drop-shadow(0 0 4px var(--color-cobalt-number));
+    color: var(--color-cobalt-number);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
