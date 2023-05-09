@@ -1,0 +1,128 @@
+.form {
+  padding: 56px 30px 30px 0;
+  width: 100%;
+  color: var(--color-default-white);
+  background-color: var(--color-sapphire);
+
+  @include vp-1199 {
+    padding: 62px 45px 68px 45px;
+    width: 100%;
+    place-self: start center;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 67px 15px;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 156%;
+    color: var(--color-default-white);
+
+    @include vp-1199 {
+      margin: 0 auto;
+      margin-bottom: 26px;
+      width: 74%;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 28px;
+      width: 100%;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  form {
+    max-width: 410px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 28px;
+
+    @include vp-1199 {
+      margin: 0 auto;
+      padding-right: 30px;
+      width: 74%;
+      max-width: none;
+      column-gap: 60px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  button[type="submit"] {
+    padding: 20px;
+    grid-column: span 2;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+
+    @include vp-767 {
+      margin-top: 9px;
+      grid-column: auto;
+    }
+  }
+
+  label {
+    position: relative;
+  }
+
+  span {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    line-height: 16px;
+
+    transition: $trans-default;
+    transition-property: top;
+
+    @include vp-1199 {
+      line-height: 18px;
+    }
+  }
+
+  input {
+    padding: 15px 10px 2px 0;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+
+    border: none;
+    border-bottom: 1px solid var(--color-light-slate-grey);
+    color: var(--color-default-white);
+    background-color: transparent;
+
+    font-family: $ff-roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus + span,
+    &:not(:placeholder-shown) + span {
+      top: 0;
+      font-size: 10px;
+      line-height: 10px;
+    }
+
+    @include hover-focus {
+      background-color: rgba(var(--color-crimson), 0.3);
+      border-bottom-color: var(--color-default-white);
+    }
+  }
+}

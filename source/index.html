@@ -592,30 +592,52 @@
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-      <br><br><br><br><br><br><br><br><br><br>
-
-      <section class="intro2">
+      <div class="contacts-block">
         <div class="container">
-          <h2>Тестовая страница.</h2>
-          <p>На данной странице показан пример модальных окон.</p>
-          <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.
-          </p>
-          <p><a class="button btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-          <p><a class="button btn" href="#" data-open-modal="success">modal--success link</a></p>
-        </div>
-      </section>
+          <!-- Форма -->
+          <section class="form">
+            <h2 class="title">Бесплатное занятие</h2>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <label>
+                <input type="text" name="name" id="name" required pattern="[a-zA-Z\u0400-\u04ff\-\s]{1,}" minlength="1"
+                  placeholder="Имя" title="Поле не должно содержать спецсимволы кроме дефиса">
+                <span>Имя</span>
+              </label>
 
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              <label>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон" required pattern="[+]?[0-9\-\(\)]+"
+                  title="Телефон не может содержать буквы и спецсимволы. Может содержать + в качестве первого знака, а также скобки и дефисы">
+                <span>Телефон</span>
+              </label>
+
+              <button class="button" type="submit">отправить</button>
+            </form>
+          </section>
+
+          <!-- Контакты  -->
+          <section class="contacts">
+            <h2 class="title">Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3>Адрес:</h3>
+                <address>г. Омск, ул. 60 лет Октября, 7</address>
+              </li>
+              <li class="contacts__item">
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </li>
+              <li class="contacts__item">
+                <h3>Телефон:</h3>
+                <a href="tel:88005555555">8-800-555-55-55</a>
+              </li>
+              <li class="contacts__item">
+                <h3>Email:</h3>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
 
     </main>
     <footer>
@@ -626,6 +648,7 @@
   </div>
 
   <!-- Модалки -->
+  <!--
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
@@ -653,6 +676,7 @@
       </div>
     </div>
   </div>
+ -->
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
