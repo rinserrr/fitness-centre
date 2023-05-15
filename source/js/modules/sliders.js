@@ -28,15 +28,33 @@ const initSliders = () => {
       },
 
       breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        // when window width is >= 768px
         768: {
           spaceBetween: 30,
           centeredSlides: false,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
         },
-
+        // when window width is >= 1200px
         1200: {
           spaceBetween: 40,
           initialSlide: 0,
           centeredSlides: false,
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        // when window width is >= 1200px
+        1280: {
+          spaceBetween: 40,
+          initialSlide: 0,
+          centeredSlides: false,
+          // slidesPerView: 4,
+          // slidesPerGroup: 4,
         },
       },
 
