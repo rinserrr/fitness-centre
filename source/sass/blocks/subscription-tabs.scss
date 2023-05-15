@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   align-self: center;
   position: relative;
+  row-gap: 15px;
 
   @include vp-1199 {
     margin-bottom: 52px;
