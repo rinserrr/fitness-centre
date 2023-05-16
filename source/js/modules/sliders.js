@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 import Swiper from '../vendor/swiper';
 
 
@@ -88,6 +91,21 @@ const initSliders = () => {
     });
   }
 
+  if (document.querySelector('.reviews__slider')) {
+    const reviewsSlider = new Swiper('.reviews__slider', {
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 60,
+      autoHeight: true,
+
+      navigation: {
+        nextEl: '.reviews__button--next',
+        prevEl: '.reviews__button--prev',
+      },
+    });
+  }
+
   const notificationSpans = document.querySelectorAll('.swiper-notification');
 
   if (notificationSpans && notificationSpans.length) {
@@ -96,6 +114,8 @@ const initSliders = () => {
     });
   }
 };
+
+export { initSliders };
 
 
 // const initSliders = () => {
@@ -140,6 +160,7 @@ const initSliders = () => {
 //   }
 // };
 
+
 const initSliders2 = () => {
   if (document.querySelector('.reviews__slider')) {
     (() =>
@@ -161,4 +182,4 @@ const initSliders2 = () => {
   }
 };
 
-export {initSliders, initSliders2};
+export { initSliders2 };
