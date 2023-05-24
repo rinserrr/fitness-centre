@@ -36,24 +36,27 @@ $color-torch-red: #ff1553;
   --color-dark-grey: #afafaf; // slider buttons
   --color-gulf-blue: #2a3b63; // card drop-shadow
 
-  // gradient
-  --color-venetian-red: #b80027;
-  --color-dark-cerulean: #003d85;
-
   // background for images
   --color-midnight-express: #000145; // Hero screen photo and super games photo
   --color-hawkes-blue: #d4d7e3; // gym photo 2nd screen
   --color-hawkes-blue-light: #dddfe2; // video cover
+  --color-link-water: #c5cbd6; // staff cards
+  --color-royal-blue: #4777e2; // promo block photo
+  --color-shuttle-grey: #59626e; // review photo
+
+  // for intro-screen and video button gradient
+  --color-venetian-red: #b80027;
+  --color-dark-cerulean: #003d85;
 
   // video button border and hover card button gradient
   --color-torch-red: #ed0233; //also super-games and promo bg
   --color-cobalt: #003eb7;
-  --color-cobalt-number: #0041ca;
-  --color-link-water: #c5cbd6; // staff cards
 
+  // hover membership card border gradient also promo small cards border
   --color-smalt: #00359f;
-  --color-royal-blue: #4777e2;
-  --color-shuttle-grey: #59626e;
+
+  // advantages numbers gradient
+  --color-cobalt-number: #0041ca;
 }
 
 // Gradient

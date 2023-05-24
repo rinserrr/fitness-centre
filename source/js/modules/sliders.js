@@ -1,3 +1,9 @@
+/* eslint-disable */
+
+
+import Swiper from '../vendor/swiper';
+
+
 const staffSliderElement = document.querySelector('.staff__slider');
 
 function addTabindex() {
@@ -25,15 +31,33 @@ const initSliders = () => {
       },
 
       breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        // when window width is >= 768px
         768: {
           spaceBetween: 30,
           centeredSlides: false,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
         },
-
+        // when window width is >= 1200px
         1200: {
           spaceBetween: 40,
           initialSlide: 0,
           centeredSlides: false,
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+        },
+        // when window width is >= 1200px
+        1280: {
+          spaceBetween: 40,
+          initialSlide: 0,
+          centeredSlides: false,
+          // slidesPerView: 4,
+          // slidesPerGroup: 4,
         },
       },
 
@@ -91,4 +115,71 @@ const initSliders = () => {
   }
 };
 
-export {initSliders};
+export { initSliders };
+
+
+// const initSliders = () => {
+//   if (staffSliderElement) {
+//     (() =>
+//       new Swiper('.staff__slider', {
+//         direction: 'horizontal',
+//         loop: true,
+//         slidesPerView: 'auto',
+//         spaceBetween: 30,
+//         initialSlide: 2,
+//         centeredSlides: true,
+//         autoResize: false,
+//         loopedSlides: 0,
+//         maxBackfaceHiddenSlides: 0,
+//         keyboard: {
+//           enabled: true,
+//           onlyInViewport: true,
+//         },
+
+//         breakpoints: {
+//           768: {
+//             spaceBetween: 30,
+//             centeredSlides: false,
+//           },
+
+//           1200: {
+//             spaceBetween: 40,
+//             initialSlide: 0,
+//             centeredSlides: false,
+//           },
+//         },
+
+//         // Navigation arrows
+//         navigation: {
+//           nextEl: '.staff__slider-button--next',
+//           prevEl: '.staff__slider-button--prev',
+//         },
+//       })
+//     )();
+
+//   }
+// };
+
+
+const initSliders2 = () => {
+  if (document.querySelector('.reviews__slider')) {
+    (() =>
+      new Swiper('.reviews__slider', {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 60,
+        autoHeight: true,
+
+        // Navigation arrows
+        navigation: {
+          nextEl: '.reviews__button--next',
+          prevEl: '.reviews__button--prev',
+        },
+      })
+    )();
+
+  }
+};
+
+export { initSliders2 };
